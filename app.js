@@ -13,15 +13,16 @@
         console.log("error occured",error)
     }
 
-    var updatestatus;
-
     function clickEventHandler(){
        //outputText.innerText="abba jabba "+textArea.value;
        var inputText=textArea.value;
+
        fetch(getTranslationUrl(inputText))
        .then(response>=response.json())
-       .then(json >= console.log(json))
+       .then(json>=console.log(json))
+
        .error(errorHandler)
+    
      }
 
 btsTranslate.addEventListener("click", clickEventHandler)
