@@ -18,10 +18,12 @@
        var inputText=textArea.value;
 
        fetch(getTranslationUrl(inputText))
-       .then(response>=response.json())
-       .then(json>=console.log(json))
-
-       .error(errorHandler)
+       .then(response => response.json())
+       .then(json => {
+        var translatedText=json.contents.translated;
+        outputText.innerText= translatedText;
+    })
+       //.error(errorHandler)
     
      }
 
